@@ -18,7 +18,6 @@
     top: 225px;
     background-image: url(/assets/dino.png);
     background-size: cover;
-    animation: jump 0.5s;
 }
 
 #rock {
