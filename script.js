@@ -20,6 +20,9 @@ document.addEventListener('keypress', () => {
 });
 
 setInterval(() => {
+    //game loop
+    score.innerText++;
+    //score continues to go up
     const dinoTop = parseInt(window.getComputedStyle(dino)
       .getPropertyValue('top'));
 
@@ -34,5 +37,10 @@ setInterval(() => {
     //makes rock reapear- loops again
     }
    
+    if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
+        alert("You got a score of: " + score.innerText +
+          "\n\nPlay again?");
+        location.reload();
+    }
 
 }, 50);
